@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html ng-app="restaurant">
+<head>
+<link rel="stylesheet" type="text/css" href="restuarant.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular.min.js" type="text/javascript"></script>
+
+	<title>Restaurant Objects Project</title>
+</head>
+<body ng-controller="doubleD">
+<script src = "restaurantobjects.js" type = "text/javascript"></script>
+<h1>{{restaurant.name}}</h1>
+<div ng-repeat = "plate in menu.plates">
+<div>{{plate.name}} </div>
+<div>{{plate.price}} <button ng-click="addOrder($index)">Add to Order</button></div>
+</div>
+<div>Your order total is: {{ total | currency }}</div>
+
+<p>Please select your dietary preferences.</p>
+<div><input ng-model="customerDD.vegan" type="checkbox">Vegan</div>
+<div><input ng-model="customerDD.gf" type="checkbox">Gluten Free</div>
+<div><input ng-model="customerDD.cf" type="checkbox">Citrus Free</div> 
+<button ng-click="dietPref()">See What Meals Match Your Preferences.</button>
+<p ng-repeat = "x in canEat track by $index">{{x.name}}</p>
+
+</body>
+</html>
