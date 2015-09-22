@@ -1,0 +1,32 @@
+object oriented programming 
+ - programming paradigm based on creation of objects
+ - methods (callable properties) functions, properties, key/value pairs, 
+
+ eliminates free floating variables (bad practice, difficult to keep track of)
+
+ creating objects... 
+ 	constructors - functions that define our data format  including properties and methods
+ 				- can be thoguht of as blueprints 
+
+ 	class - definte constructor function for a class (of objects)
+ 	instances - manifesting a blueprint with actual data.
+ 	when class is defined - convention to use capital letter
+
+ -=-=-=-=-=-=-=-=-=- -=-=-=-=-=-=-=-=-=- -=-=-=-=-=-=-=-=-=- -=-=-=-=-=-=-=-=-=- -=-=-=-=-=-=-=-=-=- -=-=-=-
+
+ "this" references WINDOW in free-standing function.
+on a function that is attached to an OBJECT, (ie a method), this refers to the host OBJECT
+In javascript, functions are objects, so they can have their own methods
+
+Call
+	- ex. function.call(context, function inputs) - calling a function with a specific context.  
+	- arguments for the original function are offset by one, because the first argument is context.  context is an object.  gives context to 'this' by referencing a specific object.  
+
+Apply
+	- ex. function.apply(context,[arguments]) - calls function with specific context - difference between call and apply is how arguments are passed.  arguments are passed in array.  
+
+
+Bind 
+	- returns a new function with it's 'this' contet permanently bound to that object 
+	- function.bind(object to be bound)
+	- bound function can be called like normal function call.  function(inputs)

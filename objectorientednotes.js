@@ -98,65 +98,92 @@
 	// method to count the words in the quote
 	// method to console log an uppercase version of the quote
 
-var Burglar = function(name, which){
-	this.name = name + which;
-	this.dexterity = Math.ceil(Math.random()*10);
-	this.ninja = this.dexterity>7;
-	this.stuff = ['diamonds', 'cash', 'guns', 'dagger of +3 dexterity', 'glass eyeball'];
+// var Burglar = function(name, which){
+// 	this.name = name + which;
+// 	this.dexterity = Math.ceil(Math.random()*10);
+// 	this.ninja = this.dexterity>7;
+// 	this.stuff = ['diamonds', 'cash', 'guns', 'dagger of +3 dexterity', 'glass eyeball'];
+// }
+
+
+
+
+
+// Burglar.prototype.burgle = function(victim){
+// 	if (victim.stuff.length !==0){
+// 	this.stuff.push(victim.stuff.pop())
+// 	console.log(this.name + ' now has ' + this.stuff.join (', ')+'.')
+// 	console.log(victim.name + ' now has ' + victim.stuff.join (', ')+'.')
+// 	console.log('=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-')
+// }
+// else{
+// 	cityOfThieves.splice(victim.which, 1)
+// 	console.log("hasta la vista, "+victim.name)
+// 	console.log("=-=-=-=-=-=-=-=-=-=-=-=-=-=")
+// }
+// }
+// // var steve = new Burglar('Steve', 4, false)
+// // // console.log(steve)
+
+// // var otherDanielle = new Burglar('Danielle', 10, true)
+
+// // steve.burgle(otherDanielle)
+// // steve.burgle(otherDanielle)
+// // steve.burgle(otherDanielle)
+// // otherDanielle.burgle(Steve)
+
+// var cityOfThieves = []
+// for(var i = 0; i<20; i++){
+//  cityOfThieves.push(new Burglar('steve', i))
+// }
+
+// var randomBurgle = function(){
+// 	var burglar = cityOfThieves[Math.floor(Math.random()*cityOfThieves.length)]
+// 	var victim = cityOfThieves[Math.floor(Math.random()*cityOfThieves.length)]
+// 	burglar.burgle(victim)
+// }
+
+// var burgleInterval = setInterval(function(){
+// 	randomBurgle()
+// }, 50)
+
+
+fizzBuzz = function(){
+	for (var i = 0; i<100; i++){
+		if(i%15===0){
+			
+			console.log( "fizzbuzz")
+		}
+		else if(i%5===0){
+			console.log("Fizz") 
+		}
+		else if(i%3===0){
+			console.log("Buzz") 
+		}
+		else{console.log(i)}
+	}
 }
 
 
+console.log(fizzBuzz())
 
 
-
-Burglar.prototype.burgle = function(victim){
-	if (victim.stuff.length !==0){
-	this.stuff.push(victim.stuff.pop())
-	console.log(this.name + ' now has ' + this.stuff.join (', ')+'.')
-	console.log(victim.name + ' now has ' + victim.stuff.join (', ')+'.')
-	console.log('=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-')
-}
-else{
-	cityOfThieves.splice(victim.which, 1)
-	console.log("hasta la vista, "+victim.name)
-	console.log("=-=-=-=-=-=-=-=-=-=-=-=-=-=")
-}
-}
-// var steve = new Burglar('Steve', 4, false)
-// // console.log(steve)
-
-// var otherDanielle = new Burglar('Danielle', 10, true)
-
-// steve.burgle(otherDanielle)
-// steve.burgle(otherDanielle)
-// steve.burgle(otherDanielle)
-// otherDanielle.burgle(Steve)
-
-var cityOfThieves = []
-for(var i = 0; i<20; i++){
- cityOfThieves.push(new Burglar('steve', i))
+primeNumber = function(){
+	for (var i = 2; i<1000;i++){
+		var isPrime = true;
+		for(var j = 2; j<i; j++){
+			if (i%j===0){
+			isPrime = false;
+			}
+		}
+	if (isPrime===true){
+		console.log(i+" is Prime.")
+	}
+	}
 }
 
-var randomBurgle = function(){
-	var burglar = cityOfThieves[Math.floor(Math.random()*cityOfThieves.length)]
-	var victim = cityOfThieves[Math.floor(Math.random()*cityOfThieves.length)]
-	burglar.burgle(victim)
-}
 
-var burgleInterval = setInterval(function(){
-	randomBurgle()
-}, 50)
-
-
-
-
-
-
-
-
-
-
-
+primeNumber()
 
 
 

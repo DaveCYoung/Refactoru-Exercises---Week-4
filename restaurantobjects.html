@@ -11,9 +11,10 @@
 <h1>{{restaurant.name}}</h1>
 <div ng-repeat = "plate in menu.plates">
 <div>{{plate.name}} </div>
-<div>{{plate.price}} <button ng-click="addOrder($index)">Add to Order</button></div>
+<div>{{plate.price}} <button ng-click="addOrder($index)"> Add to Order </button></div>
 </div>
 <div>Your order total is: {{ total | currency }}</div>
+<div ng-
 
 <p>Please select your dietary preferences.</p>
 <div><input ng-model="customerDD.vegan" type="checkbox">Vegan</div>

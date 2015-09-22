@@ -1,0 +1,61 @@
+.header{
+	width: 100%;
+	display:inline-block;
+	background-color: darkblue;
+	color: white;
+	font-family: sans-serif;
+	text-align: center;
+}
+
+.quotebox{
+	display: inline-block;
+	width: 300px;
+	height: 300px;
+	background-color: lightblue;
+	text-align: left;
+	padding: 10px;
+	margin: 10px;
+	border-radius: 10px;
+	border: 2px solid black;
+	vertical-align: text-top;
+}
+
+.newquote{
+	width: 100%;
+	text-align: center;
+	background-color: black;
+	color: white;
+	padding: 10px;
+}
+
+.bottommenu{
+	width: 100%;
+	display:inline-block;
+	background-color: black;
+	color: white;
+	font-family: sans-serif;
+	text-align: center;
+	padding: 10px;
+}
+.randomquote{
+	display: inline-block;
+	width: 300px;
+	height: 300px;
+	background-color: lightblue;
+	text-align: left;
+	padding: 10px;
+	margin: 10px;
+	border-radius: 10px;
+	border: 2px solid black;
+	vertical-align: text-top;
+	margin-top: 200px;
+}
+
+.randomquoteouter{
+position: fixed;
+top:0;
+left: 0;
+width:100%;
+height:100%;
+background-color:black;
+text-align: center;
