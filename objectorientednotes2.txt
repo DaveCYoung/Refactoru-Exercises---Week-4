@@ -1,0 +1,13 @@
+'is a' relationship
+'has a' relationship 
+
+a restaurant 'has a' menu
+a menu 'has a' plate
+a plate 'has a' food item
+
+a dog 'is a' mammal.
+a poodle 'is a' dog.
+
+subtypes of a thing.  
+
+
