@@ -54,19 +54,19 @@
 // var myQuote = new Quote('War is an ugly thing, but not the ugliest of things. The decayed and degraded state of moral and patriotic feeling which thinks that nothing is worth war is much worse. The person who has nothing for which he is willing to fight, nothing which is more important than his own personal safety, is a miserable creature and has no chance of being free unless made and kept so by the exertions of better men than himself.', 'John Stuart Mill')
 
 
-// var Iguana = function(name, color, bulgyEyes, tubbiness){
+var Iguana = function(name, color, bulgyEyes, tubbiness){
 
-// 	this.name = name; //OBJECT that lives inside every function (?)
-// 	this.color = color;//each is KEY for the object
-// 	this.bulgyEyes = bulgyEyes;
-// 	this.tubbiness = tubbiness;
-// 	// this.eat = function(){ // eat will be a callable method
-// 	// 	// console.log(this) // the value pof this is the object itself
-// 	// 	console.log(this.name +' is eating...')// gets created for every iteration of object!  
-// 	Iguana.count = Iguana.count || 0;
-// 	Iguana.count++   // establishes property .count
+	this.name = name; //OBJECT that lives inside every function (?)
+	this.color = color;//each is KEY for the object
+	this.bulgyEyes = bulgyEyes;
+	this.tubbiness = tubbiness;
+	// this.eat = function(){ // eat will be a callable method
+	// 	// console.log(this) // the value pof this is the object itself
+	// 	console.log(this.name +' is eating...')// gets created for every iteration of object!  
+	Iguana.count = Iguana.count || 0;
+	Iguana.count++   // establishes property .count
 
-// }
+}
 // 	// under the hood.  w/out return statement, functions return undefinied.
 // 	// with 'new' keywork, returns 'this' instead of undefinied. 
 
@@ -75,8 +75,8 @@
 // // var myArray = [1,2,3]
 // // myArray.join() //callable property for all arrays.  
 
-// var chubChub = new Iguana('ChubChub', 'Aquamarine', true, true)
-// console.log(chubChub)
+var chubChub = new Iguana('ChubChub', 'Aquamarine', true, true)
+console.log(chubChub)
 
 // // var myFunc = function(){
 // // 	console.log(this)

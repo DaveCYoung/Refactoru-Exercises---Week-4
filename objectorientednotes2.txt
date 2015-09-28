@@ -10,4 +10,8 @@ a poodle 'is a' dog.
 
 subtypes of a thing.  
 
+reason to use inheritance - write less code!
+helps keep code DRY: don't repeat yourself
+
+
 

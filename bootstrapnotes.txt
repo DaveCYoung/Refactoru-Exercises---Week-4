@@ -1,0 +1,31 @@
+Bootstrap is a CSS framework - 
+
+ - contains classes and CSS that are pre-defined for your use.
+ 
+ - exists to write less CSS.  geared towards responsivity, mobile-first development.
+ 
+ - components for typography, layouts, forms, buttons.
+ 
+ - normalize is baked into the css.  don't need it.  
+ 
+
+Grid System!
+
+- 12 column system.  all horizontal space broken into 12 columbs.
+
+- some classes are required for the grid to work
+	
+	- .container class or container-fluid class
+	
+	- .row class (nested in container)
+	
+	- .column (nested in row)
+
+	<div class = "container">
+		<div class = "row">
+			<div class = "column">
+	
+	- DO NOT CHANGE DEFAULT MARGIN/PADDING 
+
+	-	
+
