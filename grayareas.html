@@ -325,11 +325,19 @@ The Relationships Between Primary Actors in Iraq Syria Civil War
 		<div class = "col-sm-2">
 		</div>
 		<div class = "col-sm-5">
-		<p>All Data Supplied by IBM Alchemy News API AI Analysis </p>
+		<p>All Data Supplied by UN ReliefWeb API</p>
 		</div>
 		<div class = "col-sm-5">
 		</div>
 	
+	</div>
+</div>
+
+<div ng-show = "storyshow" class = "newsdisplayouter">
+	<div class = "newsdisplayinner">
+		<div class = "story" ng-repeat = "story in displayArray">
+		{{story.fields.title}}
+		</div>
 	</div>
 </div>
 	<br>
@@ -339,49 +347,7 @@ The Relationships Between Primary Actors in Iraq Syria Civil War
 		<div class = "menuitem"> Contribute </div>
 		<div class = "menuitem"> Contact </div>
 </div>
-<!-- <div class = "holderouter">
-	<div class = "holderinner">
-		<div class = "repeatdiv" ng-repeat = "x in runningestimate" >
-			<div class = "itemfront" ng-show = "!isactiveindex($index)" ng-click = "setactiveindex($index)" style="background-image: url({{x.background}})"> {{x.title}} 
-			</div>
 
-			<div class = "itemback" ng-show = "isactiveindex($index)"> {{x.preview}} <button ng-click = "setactiveindex2($index)"> Show Story. </button>
-			</div>
-			<div class = "full" ng-show = "isactiveindex2($index)"></div>	
-			<div class = "insidefull" ng-show = "isactiveindex2($index)"> {{x.content}} <button ng-click = "setactiveindex3()"> Return to Front Page. </button>
-			</div>
-		</div>
-	</div>
-</div>
-
-<div class = "header secondheader">
-	<h1 class = "title">Global Politics</h1>
-</div>
-
-<div class = "holderouter">
-	<div class = "holderinner">
-		<div class = "repeatdiv" ng-repeat = "x in globalpolitics" >
-			<div class = "itemfront" ng-show = "!isactiveindexgp($index)" ng-click = "setactiveindexgp($index)"> {{x.title}} 
-			</div>
-
-			<div class = "itemback" ng-show = "isactiveindexgp($index)"> {{x.preview}} <button ng-click = "setactiveindex2gp($index)"> Show Story. </button>
-			</div>
-			<div class = "full" ng-show = "isactiveindex2gp($index)"></div>	
-			<div class = "insidefull" ng-show = "isactiveindex2gp($index)"> {{x.content}} <button ng-click = "setactiveindex3gp()"> Return to Front Page. </button>
-
-		</div>
-	</div>
-</div>
-
-<div class = "header thirdheader">
-	<h1 class = "title">Defense</h1>
-</div>
-
-
-
-<div class = "footer">
-	
-</div> --> 
 <div class = "header firstheader">
 
 </div>

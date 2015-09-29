@@ -2,13 +2,11 @@
 angular.module('exModule', []);
 angular.module('exModule');
 angular.module('exModule').controller('mainController', ['$scope', '$http', function($scope, $http){
-
+$scope.storyshow = false;
 $scope.color = "#000000"
 $scope.actors = []
-$scope.relations = []
-$scope.click = function(x){
-	console.log($scope.relations[x])
-}
+$scope.relations = [];
+$scope.displayArray=[];
 $scope.colorSelect = function(input){
 	console.log(input)
 	if (0 <= input <= .1){
@@ -66,17 +64,17 @@ var Relation = function (country1, country1QueryTerm, country2, country2QueryTer
 	this.color = '#CCCCCC'
 }
 
-$scope.actors.push(new SingleActor('Iraqi Government','q.enriched.url.title=A[iraq^government]&'))
-$scope.actors.push(new SingleActor('Syrian Government','q.enriched.url.title=O[syria^assad]&'))
-$scope.actors.push(new SingleActor('ISIL','q.enriched.url.title=O[isil^isis^((islamic)%26%26(state))]&'))
-$scope.actors.push(new SingleActor('Iraqi Kurdistan','q.enriched.url.title=A[(iraq)^(O[kurds^kurdistan^pkk])]&'))
-$scope.actors.push(new SingleActor('Syrian Kurds','q.enriched.url.title=A[syria^(O[kurds^ypg])]&'))
-$scope.actors.push(new SingleActor('Al Nusra Front','q.enriched.url.title=A[nusra^front]&'))
-$scope.actors.push(new SingleActor('Iran, Paramilitary, Aligned Militias','q.enriched.url.title=O[iran^hezbollah^irgc^quds^(A[shia^militia])]&'))
-$scope.actors.push(new SingleActor('Turkey','q.enriched.url.title=O[turkey^turkish]&'))
-$scope.actors.push(new SingleActor('United States','q.enriched.url.title=O[us^(A[united^states])^american]&'))
-$scope.actors.push(new SingleActor('Russia','q.enriched.url.title=O[russia^russian]&'))
-$scope.actors.push(new SingleActor('Saurdi Arabia and Arab Coalition','q.enriched.url.title=O[saudi^(A[arab^coalition])]&'))
+$scope.actors.push(new SingleActor('Iraqi Government','?query[value]=iraq%20iraqi[fields][]=title&query[operator]=OR'))
+$scope.actors.push(new SingleActor('Syrian Government','?query[value]=syria%20assad&query[fields][]=title&query[operator]=OR'))
+$scope.actors.push(new SingleActor('ISIL','?query[value]=isil%20isis&query[fields][]=title&query[operator]=OR'))
+$scope.actors.push(new SingleActor('Iraqi Kurdistan','?query[value]=kurds%20kurdistan%20pkk&query[fields][]=title&query[operator]=OR'))
+$scope.actors.push(new SingleActor('Syrian Kurds','?query[value]=kurds%20ypg&query[fields][]=title&query[operator]=OR'))
+$scope.actors.push(new SingleActor('Al Nusra Front','?query[value]=nusra&query[fields][]=title&query[operator]=OR'))
+$scope.actors.push(new SingleActor('Iran, Paramilitary, Aligned Militias','?query[value]=iran%20quds%20irgc%20hezbollah&query[fields][]=title&query[operator]=OR'))
+$scope.actors.push(new SingleActor('Turkey','?query[value]=turkey%20turkish&query[fields][]=title&query[operator]=OR'))
+$scope.actors.push(new SingleActor('United States','?query[value]=us%20america%20american&query[fields][]=title&query[operator]=OR'))
+$scope.actors.push(new SingleActor('Russia','?query[value]=russia%20russian&query[fields][]=title&query[operator]=OR'))
+$scope.actors.push(new SingleActor('Saurdi Arabia and Arab Coalition','?query[value]=saudi%20arab&query[fields][]=title&query[operator]=OR'))
 
 $scope.populate = function(){
 	for(i=($scope.actors.length-1); i >0 ; i--){
@@ -101,12 +99,29 @@ $scope.populate = function(){
 $scope.populate()
 console.log($scope.relations)
 
-// console.log($scope.relations)
+	$http.get('http://api.rwlabs.org/v1/reports?query[value]=isil%20isis&query[fields][]=title&query[operator]=OR?query[value]=syria%20iraq%20war&query[fields][]=body&query[operator]=AND&sort[]=date:desc').then(function(response){
+					console.log(response)
+
+					}, function(error){
+					console.log(error)
+					});
 
 
 $scope.colorSelect();
 console.log($scope.color)
 
+$scope.click = function(x){
+	$scope.displayArray=[];
+	$scope.storyshow = true;
+		$http.get('http://api.rwlabs.org/v1/reports'+$scope.relations[x].country1QueryTerm+$scope.relations[x].country2QueryTerm+ '?query[value]=syria%20iraq%20war&query[fields][]=body&query[operator]=AND').then(function(response){
+			for (var i=0; i<response.data.data.length; i++){
+				$scope.displayArray.push(response.data.data[i])
+			}
+			console.log($scope.displayArray)
+		}, function(error){
+		console.log(error)
+		});
+}
 
 
 // $scope.hexString = (Math.round($scope.Val*255)).toString(16);
