@@ -43,10 +43,14 @@
 }
 .firstheader{
 	border-top: 5px solid black;
-	background-attachment: scroll;	
-	background-image: url('https://news-images.vice.com/images/articles/meta/2015/07/04/islamic-state-releases-gruesome-video-of-mass-1436030510.png?crop=1xw:0.5121107266435986xh;0xw,0.25951557093425603xh&resize=2000:*&output-format=image/jpeg&output-quality=75');
+	background-attachmfent: scroll;	
+	background-image: url('inverted image.jpg');
 	font-size: 100px;
 	background-size: cover; 
+}
+.key{
+	text-transform: uppercase;
+	font-weight: 300;
 }
 /*http://islamicvoiceofturkey.com/wp-content/uploads/iraqi-father-shoot-1508x706_c.jpg*/
 
@@ -59,21 +63,23 @@
     text-align: left;
     font-weight: bold;
     padding-top: 500px;
-    padding-left: 50px;
+    padding-left: 0px;
     padding-right:40px;
     color: #4C4C4C;
     font-size: 30px;
+    font-weight: 200;
     border-bottom: 5px solid black;
 }
 
 .headerinner{
 	padding: 50px;
-	margin: 50px;
-	background-color: white;
-	opacity: .87;
-	border-radius: 10px;
+	margin: 75px;
+/*	background-color: white;*/
+	background-color: rgba(255, 255, 255, 0.4);
+	/*border-radius: 10px;*/
 	width:40%;
 }
+
 .menu {
     list-style: none;
     margin: 0px;
@@ -93,7 +99,7 @@
 	color: white;
 	text-align: center;
 	padding-left: 50px;
-	padding-right: 50px;
+	padding-right: 50px;	
 	display: inline-block;
 	color: white;
 	text-align: center;
@@ -106,8 +112,10 @@
 }
 
 .title{
-	text-align: center;
-	font-size: 30px;
+	text-align: left;
+	font-size: 15px;
+	font-weight: 200;
+	margin-left: 50px;
 }	
 .newsdisplayouter{
 	position: fixed;
@@ -120,11 +128,25 @@
 	}
 .newsdisplayinner{
 	background-color: white;
-	width: 60%;
+	width: 70%;
+	height:65%;
 	margin: auto;
 	z-index: 2;
 	margin-top:150px;
 	text-align: left;
 	opacity: 1;
 	padding: 30px;
+	overflow: scroll;
+	font-size: 18px;
 	}
+.story{
+	padding: :20px;
+	font-weight: 200;
+	margin-top: 20px;
+	font-size: 12px;
+	margin-left: 20px;
+}
+.boxborder{
+	border: 3px solid #FFFF99;
+}
+
